@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
-
 /****** General ***********/
 * {
   font-family: 'Raleway', sans-serif;
@@ -152,11 +150,6 @@ a {
   padding: 3%;
 }
 
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
       flex-direction: column;
@@ -297,17 +290,27 @@ nav {
   align-items: center;
 }
 
+.filtresÉconomique {
+  margin: 0 2rem 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
 .filters div {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
+  margin-right: 2rem;
+  border: 2px solid #d9d9d9;
+  font-size: 17px;
   border-radius: 25px;
   height: 50px;
-  /* width: 173px; */
   padding: 4px 19px 4px 19px;
-  border: 2px solid #D9D9D9;
-  font-size: 17px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  font-weight: bold;
 }
 
 .searchZone {
@@ -344,6 +347,7 @@ nav {
 }
 
 .HebergementCards {
+  margin-bottom: 6rem;
   margin-top: 30px;
   display: flex;
   gap: 10px;
@@ -358,26 +362,61 @@ nav {
 }
 
 
-.CardActivite {
+#CardActiviteMarseille {
   width: 22%;
   height: 380px;
-  border-radius:
-      20px;
-  /* box-shadow: 0px 3px 15px 0px #0000001A; */
-  /* border: 1px solid black; */
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
 }
 
 
 
 #ActiviteMarseille img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  height: 60%;
+    width: 80%;
+  box-shadow: 0 0 20px #0000002e;
   border-radius: 20px 20px 0 0;
-  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+  object-fit: cover;
+    margin: 0
 
 }
+#CardActiviteTitle {
+  margin: 1.2rem 1.5rem;
+}
 
+@media (min-width: 1100px) {
+  #ActiviteMarseille img{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+  }
+}
+#CardActivite1 img{
+  grid-row: 2/7;
+    grid-column: 1/2;
+  }
+
+  #CardActivite2 img{
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+
+  #CardActivite3 img{
+    grid-column: 3/4;
+    grid-row: 2/7;
+  }
+
+  #CardActivite4 img {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
 .cardFOoter {
   border-radius:  0 0 20px 20px;
   padding: 20px 19px 20px 19px;
@@ -407,4 +446,12 @@ footer  {
   20px;
   gap: 
   15px;
+}
+
+@media (max-width: 750px) {
+  .footerCol {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
 }
