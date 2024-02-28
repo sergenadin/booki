@@ -290,28 +290,99 @@ nav {
   align-items: center;
 }
 
+
+.searchFormSubmitinput {
+  background-color: #0065FC;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0 1.5rem;
+  font-family: "Raleway", "Sans serif";
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .searchForm {
+    display: flex;
+    width: 100%;
+  }
+  .searchFormSearchinput {
+    flex: 1;
+  }
+  .searchFormSubmitinputText {
+    display: none;
+  }
+  .searchFormSubmitinputIcon {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .searchFiltersTitle {
+    width: 100%;
+  }
+  .searchFiltersFilter {
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 601px) {
+  .searchFormSubmitinputText {
+    display: block;
+  }
+  .searchFormSubmitinputIcon {
+    display: none !important;
+  }
+}
+
+
+
+
 .filtresÉconomique {
   margin: 0 2rem 1rem 0;
   display: flex;
   align-items: center;
 }
 
-.filters div {
+.filters > div {
   display: flex;
-  gap: 10px;
   align-items: center;
-  justify-content: center;
   margin-right: 2rem;
   border: 2px solid #d9d9d9;
-  font-size: 17px;
-  border-radius: 25px;
-  height: 50px;
-  padding: 4px 19px 4px 19px;
+  border-radius: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
   transition-duration: 0.1s;
   font-weight: bold;
 }
+.filters > div:hover{
+
+  background-color: #f3f8ff;
+  transform: scale(1.015);
+}
+
+
+.filters > div > p {
+  margin: 0 1rem;
+}
+
+.logoFilter{
+  background-color: #DEEBFF;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  min-height: 3.5rem;
+  min-width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2px
+
+}
+
+
 
 .searchZone {
   display: flex;
